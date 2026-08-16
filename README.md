@@ -28,6 +28,7 @@
 - 按 FIFO（先进先出）记录部分或全部赎回，计算分摊本金、到账金额和已实现收益。
 - 在完整退出后生成持有天数、收益、最大回撤和纪律评分复盘。
 - 导出/恢复完整 JSON 备份，并为关键变更保留操作日志。
+- 通过顶部 AI Assist 连接 OpenAI-compatible 模型，结合当前持仓和纪律信号进行对话分析。
 
 ## 界面与数据流
 
@@ -87,6 +88,7 @@ DATABASE_URL=./data/fund-assistant.db
 - 盘中估算基于最近披露的前十大持仓与股票行情加权，仅用于观察方向，状态为 `ESTIMATED`。
 - 当前默认数据适配器是 `lib/fund-data/eastmoney.ts`，来源标记为 `EASTMONEY`。
 - 应用没有登录、权限控制或多租户隔离，不建议直接暴露到公网。
+- AI 模型配置和 API Key 保存在本地 SQLite；支持 OpenAI-compatible 地址，也可连接本机 Ollama。
 - 删除账户、基金或数据恢复会影响关联数据；操作前请先备份。
 - 默认规则只是示例，不代表适合任何人的投资策略。
 
@@ -110,6 +112,7 @@ DATABASE_URL=./data/fund-assistant.db
 - [架构与目录](docs/architecture.md)：系统边界、数据流、核心模块和扩展方式。
 - [API 参考](docs/api.md)：路由、参数和响应语义。
 - [数据导入与备份](docs/data-import.md)：Excel/JSON 格式、事务行为和恢复注意事项。
+- [AI Assist](docs/ai-assist.md)：模型配置、上下文范围和安全边界。
 - [本地开发](docs/development.md)：测试、迁移、构建和提交前检查。
 - [贡献指南](CONTRIBUTING.md)：如何提交 issue、修改代码和补充测试。
 - [安全说明](SECURITY.md)：本地数据、部署边界和漏洞报告方式。

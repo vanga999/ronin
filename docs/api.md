@@ -15,6 +15,8 @@
 | `GET` | `/api/transactions` | 查询交易流水 |
 | `GET`, `POST` | `/api/strategies` | 查询或创建策略版本 |
 | `POST` | `/api/redemptions` | 登记实际赎回 |
+| `GET`, `POST` | `/api/ai/settings` | 查询或保存本地 AI 模型设置 |
+| `POST` | `/api/ai/chat` | 结合当前投资上下文请求模型回答 |
 
 ## 市场数据与信号
 
