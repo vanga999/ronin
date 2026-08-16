@@ -5,9 +5,18 @@ import { useRouter } from "next/navigation";
 import type { getDashboardData } from "@/lib/dashboard";
 
 type DashboardData = ReturnType<typeof getDashboardData>;
-type Panel = "account" | "fund" | "lot" | "redemption" | "import" | "backup" | "manage" | "ruleDetails" | "ruleCreate" | "editAccount" | "editFund" | "editLot" | "simulation" | null;
+type Panel = "account" | "fund" | "lot" | "redemption" | "import" | "backup" | "manage" | "ruleDetails" | "ruleCreate" | "editAccount" | "editFund" | "editLot" | "simulation" | "ai" | null;
+type AiMessage = { role: "user" | "assistant"; content: string };
+type AiSettings = {
+  providerName: string;
+  baseUrl: string;
+  model: string;
+  hasApiKey: boolean;
+  maskedApiKey: string;
+  updatedAt: string | null;
+};
 
-async function requestJson(url: string, method: "POST" | "PATCH" | "DELETE", body?: unknown) {
+async function requestJson(url: string, method: "GET" | "POST" | "PATCH" | "DELETE", body?: unknown) {
   const response = await fetch(url, {
     method,
     headers: body === undefined ? undefined : { "content-type": "application/json" },
@@ -26,6 +35,17 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
   const [signalPage, setSignalPage] = useState(1);
   const [ledgerPage, setLedgerPage] = useState(1);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [aiSettings, setAiSettings] = useState<AiSettings | null>(null);
+  const [aiSettingsDraft, setAiSettingsDraft] = useState({
+    providerName: "OpenAI-compatible",
+    baseUrl: "https://api.openai.com/v1",
+    model: "gpt-4o-mini",
+    apiKey: "",
+  });
+  const [aiMessages, setAiMessages] = useState<AiMessage[]>([]);
+  const [aiInput, setAiInput] = useState("");
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState("");
   const [simulation, setSimulation] = useState<{
     accountId: string;
     instrumentId: string;
@@ -74,6 +94,61 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
   function openEditor(nextPanel: Panel, id: string) {
     setSelectedId(id);
     setPanel(nextPanel);
+  }
+
+  async function openAiAssist() {
+    setPanel("ai");
+    setAiError("");
+    try {
+      const result = await requestJson("/api/ai/settings", "GET") as AiSettings;
+      setAiSettings(result);
+      setAiSettingsDraft((draft) => ({
+        ...draft,
+        providerName: result.providerName,
+        baseUrl: result.baseUrl,
+        model: result.model,
+        apiKey: "",
+      }));
+    } catch (error) {
+      setAiError(error instanceof Error ? error.message : "无法读取 AI 设置");
+    }
+  }
+
+  async function saveAiSettings(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setAiLoading(true);
+    setAiError("");
+    try {
+      const result = await requestJson("/api/ai/settings", "POST", aiSettingsDraft) as AiSettings;
+      setAiSettings(result);
+      setAiSettingsDraft((draft) => ({ ...draft, apiKey: "" }));
+      setMessage("AI 模型设置已保存");
+    } catch (error) {
+      setAiError(error instanceof Error ? error.message : "AI 设置保存失败");
+    } finally {
+      setAiLoading(false);
+    }
+  }
+
+  async function sendAiMessage(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const content = aiInput.trim();
+    if (!content || aiLoading) return;
+    const nextMessages: AiMessage[] = [...aiMessages, { role: "user", content }];
+    setAiMessages(nextMessages);
+    setAiInput("");
+    setAiLoading(true);
+    setAiError("");
+    try {
+      const result = await requestJson("/api/ai/chat", "POST", { messages: nextMessages }) as {
+        message: AiMessage;
+      };
+      setAiMessages([...nextMessages, result.message]);
+    } catch (error) {
+      setAiError(error instanceof Error ? error.message : "AI 请求失败");
+    } finally {
+      setAiLoading(false);
+    }
   }
 
   async function simulateRedemption(instrumentId: string, ratio: string) {
@@ -126,6 +201,7 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
           <button className="sync-button" disabled={busy || instruments.length === 0} onClick={() => {
             void handle(() => requestJson("/api/jobs/daily-settlement", "POST", {}), "正式净值、收益与日报已更新");
           }}>{busy ? "同步中…" : "刷新正式净值"}</button>
+          <button className="ai-button" disabled={busy || aiLoading} onClick={() => void openAiAssist()}><span>✦</span> AI Assist</button>
         </div>
       </header>
 
@@ -360,7 +436,7 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
       </section>
 
       {panel && <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && setPanel(null)}>
-        <div className="modal">
+        <div className={`modal${panel === "ai" ? " ai-modal" : ""}`}>
           <button className="close" onClick={() => setPanel(null)} aria-label="关闭">×</button>
           {panel === "account" && <Form title="创建投资账户" submit={busy ? "保存中…" : "创建账户"} disabled={busy} onSubmit={(e) => {
             const data = formData(e); void handle(() => requestJson("/api/accounts", "POST", data), "账户已创建");
@@ -527,6 +603,18 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
             </dl>
             <small>{simulation.feeNotice}</small>
           </div>}
+          {panel === "ai" && <AiAssistPanel
+            settings={aiSettings}
+            draft={aiSettingsDraft}
+            messages={aiMessages}
+            input={aiInput}
+            loading={aiLoading}
+            error={aiError}
+            onDraftChange={(field, value) => setAiSettingsDraft((draft) => ({ ...draft, [field]: value }))}
+            onSave={saveAiSettings}
+            onInputChange={setAiInput}
+            onSend={sendAiMessage}
+          />}
         </div>
       </div>}
       <footer className="site-footer">
@@ -535,6 +623,64 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
       </footer>
     </main>
   );
+}
+
+function AiAssistPanel({
+  settings,
+  draft,
+  messages,
+  input,
+  loading,
+  error,
+  onDraftChange,
+  onSave,
+  onInputChange,
+  onSend,
+}: {
+  settings: AiSettings | null;
+  draft: { providerName: string; baseUrl: string; model: string; apiKey: string };
+  messages: AiMessage[];
+  input: string;
+  loading: boolean;
+  error: string;
+  onDraftChange: (field: "providerName" | "baseUrl" | "model" | "apiKey", value: string) => void;
+  onSave: (event: FormEvent<HTMLFormElement>) => void;
+  onInputChange: (value: string) => void;
+  onSend: (event: FormEvent<HTMLFormElement>) => void;
+}) {
+  return <div className="ai-panel">
+    <p className="eyebrow">AI ASSIST</p>
+    <h2>和模型聊聊当前组合</h2>
+    <p className="ai-intro">连接一个 OpenAI-compatible 接口，模型会读取当前正式净值、持仓、总账和纪律信号，帮助你理解数据与风险。</p>
+    <form className="ai-settings-form" onSubmit={onSave}>
+      <div className="ai-settings-grid">
+        <div className="field"><label>服务名称</label><input value={draft.providerName} onChange={(event) => onDraftChange("providerName", event.target.value)} placeholder="OpenAI-compatible / DeepSeek / Ollama" required /></div>
+        <div className="field"><label>模型地址</label><input type="url" value={draft.baseUrl} onChange={(event) => onDraftChange("baseUrl", event.target.value)} placeholder="https://api.openai.com/v1" required /></div>
+        <div className="field"><label>模型名称</label><input value={draft.model} onChange={(event) => onDraftChange("model", event.target.value)} placeholder="gpt-4o-mini" required /></div>
+        <div className="field"><label>API Key</label><input type="password" value={draft.apiKey} onChange={(event) => onDraftChange("apiKey", event.target.value)} placeholder={settings?.hasApiKey ? `已保存 ${settings.maskedApiKey}，留空保持不变` : "本机 Ollama 可留空"} /></div>
+      </div>
+      <div className="ai-settings-actions">
+        <small>支持 OpenAI、DeepSeek、OpenRouter、Ollama 等 OpenAI-compatible 服务。Key 仅保存在本地 SQLite。</small>
+        <button className="ai-save-button" type="submit" disabled={loading}>{loading ? "保存中…" : "保存模型设置"}</button>
+      </div>
+    </form>
+    <div className="ai-chat-heading"><div><span>CONVERSATION</span><strong>当前投资上下文</strong></div><small>正式净值口径 · 仅供辅助分析</small></div>
+    <div className="ai-chat-messages">
+      {messages.length === 0 ? <div className="ai-empty"><strong>你可以这样问</strong><p>“帮我总结当前组合的主要风险”</p><p>“按纪律规则，哪些信号需要优先处理？”</p><p>“如果只看正式净值，最近收益如何变化？”</p></div> : messages.map((message, index) => (
+        <div className={`ai-message ${message.role}`} key={`${message.role}-${index}`}>
+          <span>{message.role === "user" ? "你" : "AI Assist"}</span>
+          <p>{message.content}</p>
+        </div>
+      ))}
+      {loading && <div className="ai-message assistant"><span>AI Assist</span><p className="ai-thinking">正在结合当前持仓分析…</p></div>}
+    </div>
+    <form className="ai-chat-form" onSubmit={onSend}>
+      <textarea value={input} onChange={(event) => onInputChange(event.target.value)} placeholder="输入你想了解的问题…" rows={3} disabled={loading} />
+      <button className="submit" type="submit" disabled={loading || !input.trim()}>发送给 AI</button>
+    </form>
+    {error && <p className="ai-error">{error}</p>}
+    <p className="form-note">AI 的回答不是投资建议，也不会自动下单。请核对基金平台的实际净值、费用和交易结果。</p>
+  </div>;
 }
 
 function Empty({ text }: { text: string }) {

@@ -44,6 +44,23 @@ export const accountUpdateInput = accountInput.extend({
   strategyId: z.string().uuid().optional(),
 });
 
+export const aiSettingsInput = z.object({
+  providerName: z.string().trim().min(1).max(80),
+  baseUrl: z.string().trim().url().refine(
+    (value) => value.startsWith("http://") || value.startsWith("https://"),
+    "模型地址必须使用 http:// 或 https://",
+  ),
+  model: z.string().trim().min(1).max(160),
+  apiKey: z.string().trim().max(500).optional().default(""),
+});
+
+export const aiChatInput = z.object({
+  messages: z.array(z.object({
+    role: z.enum(["user", "assistant"]),
+    content: z.string().trim().min(1).max(12000),
+  })).min(1).max(20),
+});
+
 export const strategyInput = z.object({
   name: z.string().trim().min(1).max(80),
   firstTakeProfitRate: positiveDecimalString.refine((value) => new Decimal(value).lessThan(1), "比例必须小于 1"),

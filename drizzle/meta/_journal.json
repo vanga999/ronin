@@ -43,6 +43,13 @@
       "when": 1785225317772,
       "tag": "0005_secret_felicia_hardy",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1786844565137,
+      "tag": "0006_open_kingpin",
+      "breakpoints": true
     }
   ]
 }

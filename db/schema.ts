@@ -19,6 +19,15 @@ export const strategies = sqliteTable("fund_strategy", {
   ...timestamps,
 });
 
+export const aiSettings = sqliteTable("ai_assistant_setting", {
+  id: text("id").primaryKey(),
+  providerName: text("provider_name").notNull(),
+  baseUrl: text("base_url").notNull(),
+  model: text("model").notNull(),
+  apiKey: text("api_key").notNull().default(""),
+  ...timestamps,
+});
+
 export const accounts = sqliteTable("fund_account", {
   id: text("id").primaryKey(),
   name: text("name").notNull(),

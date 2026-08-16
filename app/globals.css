@@ -19,6 +19,10 @@ main { min-height:100vh; }
 .header-actions { display:flex; align-items:center; gap:10px; }
 .sync-button { padding:9px 14px; border:0; color:white; background:var(--ink); font-size:11px; cursor:pointer; }
 .sync-button:disabled { opacity:.45; cursor:not-allowed; }
+.ai-button { padding:9px 14px; border:1px solid var(--accent); color:var(--accent); background:transparent; font-size:11px; cursor:pointer; }
+.ai-button span { margin-right:5px; font-size:13px; }
+.ai-button:hover { color:white; background:var(--accent); }
+.ai-button:disabled { opacity:.45; cursor:not-allowed; }
 .hero { min-height:430px; padding:80px max(7vw,24px) 64px; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(240px,.5fr); gap:60px; align-items:end; border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
 .hero::after { content:""; position:absolute; width:420px; height:420px; border:1px solid #d4dacf; border-radius:50%; right:-170px; top:-170px; box-shadow:0 0 0 55px var(--paper),0 0 0 56px #d4dacf; pointer-events:none; }
 .eyebrow { margin:0 0 16px; color:var(--accent); font-size:10px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; }
@@ -189,6 +193,7 @@ td i { color:var(--green); font-style:normal; font-weight:700; }
 .empty p { margin:8px 0 0; font-size:12px; }
 .modal-backdrop { position:fixed; z-index:30; inset:0; display:grid; place-items:center; padding:20px; background:#13241dd9; backdrop-filter:blur(6px); overflow-y:auto; }
 .modal { width:min(520px,100%); max-height:calc(100vh - 40px); overflow-y:auto; padding:38px; position:relative; background:var(--paper); box-shadow:0 24px 100px #0004; }
+.ai-modal { width:min(920px,100%); }
 .modal h2 { margin:0 0 28px; font:500 32px/1.1 Georgia,"Songti SC",serif; }
 .close { position:absolute; right:20px; top:17px; width:32px; height:32px; border:0; background:transparent; color:var(--muted); font-size:27px; cursor:pointer; }
 .form-fields { display:grid; gap:17px; }
@@ -246,6 +251,34 @@ td i { color:var(--green); font-style:normal; font-weight:700; }
 .rule-selector b { font-size:11px; }
 .rule-selector small { margin-top:5px; color:var(--muted); font-size:9px; }
 .rule-selector select { max-width:220px; height:38px; padding:0 9px; border:1px solid var(--line); background:var(--card); }
+.ai-panel h2 { margin-bottom:12px; }
+.ai-intro { max-width:720px; margin:0 0 22px; color:var(--muted); font-size:12px; line-height:1.7; }
+.ai-settings-form { padding:17px; background:var(--card); border:1px solid var(--line); }
+.ai-settings-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.ai-settings-actions { margin-top:15px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.ai-settings-actions small { color:var(--muted); font-size:10px; line-height:1.5; }
+.ai-save-button { flex:none; padding:10px 13px; border:0; color:white; background:var(--ink); font-size:10px; font-weight:700; cursor:pointer; }
+.ai-save-button:disabled { opacity:.45; cursor:not-allowed; }
+.ai-chat-heading { margin-top:27px; padding-bottom:12px; display:flex; align-items:flex-end; justify-content:space-between; border-bottom:1px solid var(--ink); }
+.ai-chat-heading span,.ai-chat-heading strong { display:block; }
+.ai-chat-heading span { color:var(--accent); font:700 9px/1 ui-monospace,monospace; letter-spacing:.15em; }
+.ai-chat-heading strong { margin-top:8px; font:500 21px/1 Georgia,"Songti SC",serif; }
+.ai-chat-heading small { color:var(--muted); font-size:10px; }
+.ai-chat-messages { min-height:190px; max-height:340px; margin-top:14px; padding:4px 2px; overflow-y:auto; display:grid; gap:12px; }
+.ai-message { max-width:84%; padding:12px 14px; background:#e9ebe3; }
+.ai-message.user { justify-self:end; background:var(--ink); color:var(--paper); }
+.ai-message>span { display:block; margin-bottom:7px; color:var(--accent); font:700 9px/1 ui-monospace,monospace; letter-spacing:.1em; }
+.ai-message.user>span { color:#f7b39e; }
+.ai-message p { margin:0; white-space:pre-wrap; font-size:12px; line-height:1.7; }
+.ai-thinking { color:var(--muted); }
+.ai-empty { min-height:170px; display:grid; align-content:center; justify-items:center; color:var(--muted); background:#e9ebe3; font-size:11px; }
+.ai-empty strong { color:var(--ink); font-size:12px; }
+.ai-empty p { margin:5px 0 0; }
+.ai-chat-form { margin-top:14px; display:flex; align-items:flex-end; gap:10px; }
+.ai-chat-form textarea { flex:1; min-height:78px; padding:12px; resize:vertical; color:var(--ink); background:var(--card); border:1px solid #cdd5cf; outline:none; font:12px/1.6 inherit; }
+.ai-chat-form textarea:focus { border-color:var(--ink); box-shadow:0 0 0 1px var(--ink); }
+.ai-chat-form .submit { width:120px; margin-top:0; flex:none; }
+.ai-error { margin:12px 0 0; padding:10px 12px; color:#9a431d; background:#f7e5d4; font-size:11px; line-height:1.5; }
 @media (max-width:900px) {
   .hero { grid-template-columns:1fr; padding-top:60px; }
   .hero-status { max-width:420px; }
@@ -267,6 +300,7 @@ td i { color:var(--green); font-style:normal; font-weight:700; }
   .ledger-summary article:nth-last-child(-n+3) { border-bottom:1px solid var(--line); }
   .ledger-summary article:last-child { border-bottom:0; }
   .rule-heading-actions { margin-top:16px; align-items:flex-start; }
+  .ai-settings-actions { align-items:flex-start; flex-direction:column; }
 }
 @media (max-width:580px) {
   .phase { display:none; }
@@ -284,6 +318,12 @@ td i { color:var(--green); font-style:normal; font-weight:700; }
   .section-heading>p { margin-top:16px; }
   .rule-heading-actions { display:block; }
   .rule-heading-actions button { margin-top:10px; }
+  .ai-button { padding:8px 10px; }
+  .ai-settings-grid { grid-template-columns:1fr; }
+  .ai-chat-heading { display:block; }
+  .ai-chat-heading small { display:block; margin-top:9px; }
+  .ai-chat-form { display:block; }
+  .ai-chat-form .submit { width:100%; margin-top:10px; }
   .threshold-list { grid-template-columns:1fr; }
   .threshold-list>div { border-right:0; }
   .threshold-list>div:nth-last-child(2) { border-bottom:1px solid var(--line); }
