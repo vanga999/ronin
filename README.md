@@ -10,6 +10,14 @@
   <img src="docs/assets/dashboard-overview.png" alt="基金智能纪律助手界面总览" width="1200">
 </p>
 
+## GitHub Star History
+
+<p align="center">
+  <img src="docs/assets/stars.svg" alt="GitHub Star 增长曲线" width="960">
+</p>
+
+图表由 GitHub Actions 每日更新，数据来自 GitHub Repository API。
+
 ## 你可以用它做什么
 
 - 管理账户、基金和每一笔买入批次。
