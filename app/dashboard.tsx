@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import type { getDashboardData } from "@/lib/dashboard";
 
 type DashboardData = ReturnType<typeof getDashboardData>;
-type Panel = "account" | "fund" | "lot" | "redemption" | "import" | "backup" | "manage" | "ruleDetails" | "ruleCreate" | "editAccount" | "editFund" | "editLot" | "simulation" | "ai" | null;
+type Panel = "account" | "fund" | "lot" | "redemption" | "import" | "backup" | "export" | "manage" | "ruleDetails" | "ruleCreate" | "editAccount" | "editFund" | "editLot" | "simulation" | "ai" | null;
 type AiMessage = { role: "user" | "assistant"; content: string };
 type AiSettings = {
   providerName: string;
@@ -294,6 +294,7 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
           <button onClick={() => setPanel("lot")}><span>03</span><strong>记录买入</strong><small>自动生成批次与交易</small></button>
           <button onClick={() => { setSelectedId(null); setPanel("redemption"); }}><span>04</span><strong>记录赎回</strong><small>FIFO 分摊成本与已实现收益</small></button>
           <button onClick={() => setPanel("import")}><span>⇧</span><strong>文件导入</strong><small>支持 Excel 与截图识别 JSON</small></button>
+          <button onClick={() => setPanel("export")}><span>⇩</span><strong>数据导出</strong><small>导出 Excel 或 CSV 报表</small></button>
           <button onClick={() => setPanel("backup")}><span>↓</span><strong>备份恢复</strong><small>完整导出或恢复本地数据</small></button>
           <button onClick={() => setPanel("manage")}><span>✎</span><strong>管理数据</strong><small>编辑或删除错误记录</small></button>
         </div>
@@ -512,6 +513,48 @@ export function Dashboard({ initialData }: { initialData: DashboardData }) {
                 return result;
               }, "备份已恢复");
             }}>恢复此备份</button>
+          </div>}
+          {panel === "export" && <div className="export-panel">
+            <p className="eyebrow">DATA EXPORT</p><h2>数据导出</h2>
+            <p className="form-note">将数据导出为 Excel 或 CSV 格式，方便在第三方工具中分析或存档。导出的数据包含中文表头，可直接用 Excel 打开。</p>
+            <div className="export-grid">
+              <div className="export-item">
+                <div><strong>交易流水</strong><small>所有申购、赎回、分红记录</small></div>
+                <div className="export-actions">
+                  <a href="/api/export?type=transactions&format=xlsx" className="export-btn">Excel</a>
+                  <a href="/api/export?type=transactions&format=csv" className="export-btn secondary">CSV</a>
+                </div>
+              </div>
+              <div className="export-item">
+                <div><strong>持仓批次</strong><small>当前所有买入批次及盈亏</small></div>
+                <div className="export-actions">
+                  <a href="/api/export?type=lots&format=xlsx" className="export-btn">Excel</a>
+                  <a href="/api/export?type=lots&format=csv" className="export-btn secondary">CSV</a>
+                </div>
+              </div>
+              <div className="export-item">
+                <div><strong>每日快照</strong><small>每日资产市值与收益曲线</small></div>
+                <div className="export-actions">
+                  <a href="/api/export?type=daily-snapshots&format=xlsx" className="export-btn">Excel</a>
+                  <a href="/api/export?type=daily-snapshots&format=csv" className="export-btn secondary">CSV</a>
+                </div>
+              </div>
+              <div className="export-item">
+                <div><strong>纪律信号</strong><small>历史信号及处理状态</small></div>
+                <div className="export-actions">
+                  <a href="/api/export?type=signals&format=xlsx" className="export-btn">Excel</a>
+                  <a href="/api/export?type=signals&format=csv" className="export-btn secondary">CSV</a>
+                </div>
+              </div>
+              <div className="export-item">
+                <div><strong>投资复盘</strong><small>完整退出后的复盘记录</small></div>
+                <div className="export-actions">
+                  <a href="/api/export?type=reviews&format=xlsx" className="export-btn">Excel</a>
+                  <a href="/api/export?type=reviews&format=csv" className="export-btn secondary">CSV</a>
+                </div>
+              </div>
+            </div>
+            <p className="form-note" style={{ marginTop: "16px" }}>备份与导出区别：<b>备份</b>是完整的 JSON 格式，用于恢复数据；<b>导出</b>是用户友好的表格格式，用于分析或存档。</p>
           </div>}
           {panel === "manage" && <div className="manage-panel">
             <p className="eyebrow">DATA MANAGEMENT</p><h2>管理基础资料</h2>
