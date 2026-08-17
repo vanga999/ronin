@@ -275,7 +275,7 @@ td i { color:var(--green); font-style:normal; font-weight:700; }
 .ai-empty strong { color:var(--ink); font-size:12px; }
 .ai-empty p { margin:5px 0 0; }
 .ai-chat-form { margin-top:14px; display:flex; align-items:flex-end; gap:10px; }
-.ai-chat-form textarea { flex:1; min-height:78px; padding:12px; resize:vertical; color:var(--ink); background:var(--card); border:1px solid #cdd5cf; outline:none; font:12px/1.6 inherit; }
+.ai-chat-form textarea { flex:1; width:100%; min-height:84px; max-height:360px; padding:12px; box-sizing:border-box; resize:vertical; color:var(--ink); background:var(--card); border:1px solid #cdd5cf; border-radius:0; outline:none; font:inherit; font-size:12px; line-height:1.6; }
 .ai-chat-form textarea:focus { border-color:var(--ink); box-shadow:0 0 0 1px var(--ink); }
 .ai-chat-form .submit { width:120px; margin-top:0; flex:none; }
 .ai-error { margin:12px 0 0; padding:10px 12px; color:#9a431d; background:#f7e5d4; font-size:11px; line-height:1.5; }
