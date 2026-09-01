@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title description">
   <title id="title">GitHub Star History for vanga999/ronin</title>
-  <desc id="description">16 daily data points; latest total is 1 star.</desc>
+  <desc id="description">17 daily data points; latest total is 1 star.</desc>
   <style>
     .background { fill: #fbfaf5; }
     .title { fill: #16261f; font: 600 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -23,55 +23,58 @@
     <text x="60" y="189.0" text-anchor="end" class="axis">1</text>
     <line x1="74" y1="296.0" x2="928" y2="296.0" class="grid" />
     <text x="60" y="300.0" text-anchor="end" class="axis">0</text>
-  <polyline points="74.0,185.0 130.9,185.0 187.9,185.0 244.8,185.0 301.7,185.0 358.7,185.0 415.6,185.0 472.5,185.0 529.5,185.0 586.4,185.0 643.3,185.0 700.3,185.0 757.2,185.0 814.1,185.0 871.1,185.0 928.0,185.0" class="line" />
+  <polyline points="74.0,185.0 127.4,185.0 180.8,185.0 234.1,185.0 287.5,185.0 340.9,185.0 394.3,185.0 447.6,185.0 501.0,185.0 554.4,185.0 607.8,185.0 661.1,185.0 714.5,185.0 767.9,185.0 821.3,185.0 874.6,185.0 928.0,185.0" class="line" />
   <circle cx="74.0" cy="185.0" r="4" class="point">
       <title>2026-08-16 · 1 star</title>
     </circle>
-    <circle cx="130.9" cy="185.0" r="4" class="point">
+    <circle cx="127.4" cy="185.0" r="4" class="point">
       <title>2026-08-17 · 1 star</title>
     </circle>
-    <circle cx="187.9" cy="185.0" r="4" class="point">
+    <circle cx="180.8" cy="185.0" r="4" class="point">
       <title>2026-08-18 · 1 star</title>
     </circle>
-    <circle cx="244.8" cy="185.0" r="4" class="point">
+    <circle cx="234.1" cy="185.0" r="4" class="point">
       <title>2026-08-19 · 1 star</title>
     </circle>
-    <circle cx="301.7" cy="185.0" r="4" class="point">
+    <circle cx="287.5" cy="185.0" r="4" class="point">
       <title>2026-08-20 · 1 star</title>
     </circle>
-    <circle cx="358.7" cy="185.0" r="4" class="point">
+    <circle cx="340.9" cy="185.0" r="4" class="point">
       <title>2026-08-21 · 1 star</title>
     </circle>
-    <circle cx="415.6" cy="185.0" r="4" class="point">
+    <circle cx="394.3" cy="185.0" r="4" class="point">
       <title>2026-08-22 · 1 star</title>
     </circle>
-    <circle cx="472.5" cy="185.0" r="4" class="point">
+    <circle cx="447.6" cy="185.0" r="4" class="point">
       <title>2026-08-23 · 1 star</title>
     </circle>
-    <circle cx="529.5" cy="185.0" r="4" class="point">
+    <circle cx="501.0" cy="185.0" r="4" class="point">
       <title>2026-08-24 · 1 star</title>
     </circle>
-    <circle cx="586.4" cy="185.0" r="4" class="point">
+    <circle cx="554.4" cy="185.0" r="4" class="point">
       <title>2026-08-25 · 1 star</title>
     </circle>
-    <circle cx="643.3" cy="185.0" r="4" class="point">
+    <circle cx="607.8" cy="185.0" r="4" class="point">
       <title>2026-08-26 · 1 star</title>
     </circle>
-    <circle cx="700.3" cy="185.0" r="4" class="point">
+    <circle cx="661.1" cy="185.0" r="4" class="point">
       <title>2026-08-27 · 1 star</title>
     </circle>
-    <circle cx="757.2" cy="185.0" r="4" class="point">
+    <circle cx="714.5" cy="185.0" r="4" class="point">
       <title>2026-08-28 · 1 star</title>
     </circle>
-    <circle cx="814.1" cy="185.0" r="4" class="point">
+    <circle cx="767.9" cy="185.0" r="4" class="point">
       <title>2026-08-29 · 1 star</title>
     </circle>
-    <circle cx="871.1" cy="185.0" r="4" class="point">
+    <circle cx="821.3" cy="185.0" r="4" class="point">
       <title>2026-08-30 · 1 star</title>
     </circle>
-    <circle cx="928.0" cy="185.0" r="4" class="point">
+    <circle cx="874.6" cy="185.0" r="4" class="point">
       <title>2026-08-31 · 1 star</title>
     </circle>
+    <circle cx="928.0" cy="185.0" r="4" class="point">
+      <title>2026-09-01 · 1 star</title>
+    </circle>
   <text x="74" y="338" class="date">2026-08-16</text>
-  <text x="928" y="338" text-anchor="end" class="date">2026-08-31</text>
+  <text x="928" y="338" text-anchor="end" class="date">2026-09-01</text>
 </svg>
