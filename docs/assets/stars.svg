@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title description">
   <title id="title">GitHub Star History for vanga999/ronin</title>
-  <desc id="description">103 daily data points; latest total is 1 star.</desc>
+  <desc id="description">104 daily data points; latest total is 1 star.</desc>
   <style>
     .background { fill: #fbfaf5; }
     .title { fill: #16261f; font: 600 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -23,316 +23,319 @@
     <text x="60" y="189.0" text-anchor="end" class="axis">1</text>
     <line x1="74" y1="296.0" x2="928" y2="296.0" class="grid" />
     <text x="60" y="300.0" text-anchor="end" class="axis">0</text>
-  <polyline points="74.0,185.0 82.4,185.0 90.7,185.0 99.1,185.0 107.5,185.0 115.9,185.0 124.2,185.0 132.6,185.0 141.0,185.0 149.4,185.0 157.7,185.0 166.1,185.0 174.5,185.0 182.8,185.0 191.2,185.0 199.6,185.0 208.0,185.0 216.3,185.0 224.7,185.0 233.1,185.0 241.5,185.0 249.8,185.0 258.2,185.0 266.6,185.0 274.9,185.0 283.3,185.0 291.7,185.0 300.1,185.0 308.4,185.0 316.8,185.0 325.2,185.0 333.5,185.0 341.9,185.0 350.3,185.0 358.7,185.0 367.0,185.0 375.4,185.0 383.8,185.0 392.2,185.0 400.5,185.0 408.9,185.0 417.3,185.0 425.6,185.0 434.0,185.0 442.4,185.0 450.8,185.0 459.1,185.0 467.5,185.0 475.9,185.0 484.3,185.0 492.6,185.0 501.0,185.0 509.4,185.0 517.7,185.0 526.1,185.0 534.5,185.0 542.9,185.0 551.2,185.0 559.6,185.0 568.0,185.0 576.4,185.0 584.7,185.0 593.1,185.0 601.5,185.0 609.8,185.0 618.2,185.0 626.6,185.0 635.0,185.0 643.3,185.0 651.7,185.0 660.1,185.0 668.5,185.0 676.8,185.0 685.2,185.0 693.6,185.0 701.9,185.0 710.3,185.0 718.7,185.0 727.1,185.0 735.4,185.0 743.8,185.0 752.2,185.0 760.5,185.0 768.9,185.0 777.3,185.0 785.7,185.0 794.0,185.0 802.4,185.0 810.8,185.0 819.2,185.0 827.5,185.0 835.9,185.0 844.3,185.0 852.6,185.0 861.0,185.0 869.4,185.0 877.8,185.0 886.1,185.0 894.5,185.0 902.9,185.0 911.3,185.0 919.6,185.0 928.0,185.0" class="line" />
+  <polyline points="74.0,185.0 82.3,185.0 90.6,185.0 98.9,185.0 107.2,185.0 115.5,185.0 123.7,185.0 132.0,185.0 140.3,185.0 148.6,185.0 156.9,185.0 165.2,185.0 173.5,185.0 181.8,185.0 190.1,185.0 198.4,185.0 206.7,185.0 215.0,185.0 223.2,185.0 231.5,185.0 239.8,185.0 248.1,185.0 256.4,185.0 264.7,185.0 273.0,185.0 281.3,185.0 289.6,185.0 297.9,185.0 306.2,185.0 314.4,185.0 322.7,185.0 331.0,185.0 339.3,185.0 347.6,185.0 355.9,185.0 364.2,185.0 372.5,185.0 380.8,185.0 389.1,185.0 397.4,185.0 405.7,185.0 413.9,185.0 422.2,185.0 430.5,185.0 438.8,185.0 447.1,185.0 455.4,185.0 463.7,185.0 472.0,185.0 480.3,185.0 488.6,185.0 496.9,185.0 505.1,185.0 513.4,185.0 521.7,185.0 530.0,185.0 538.3,185.0 546.6,185.0 554.9,185.0 563.2,185.0 571.5,185.0 579.8,185.0 588.1,185.0 596.3,185.0 604.6,185.0 612.9,185.0 621.2,185.0 629.5,185.0 637.8,185.0 646.1,185.0 654.4,185.0 662.7,185.0 671.0,185.0 679.3,185.0 687.6,185.0 695.8,185.0 704.1,185.0 712.4,185.0 720.7,185.0 729.0,185.0 737.3,185.0 745.6,185.0 753.9,185.0 762.2,185.0 770.5,185.0 778.8,185.0 787.0,185.0 795.3,185.0 803.6,185.0 811.9,185.0 820.2,185.0 828.5,185.0 836.8,185.0 845.1,185.0 853.4,185.0 861.7,185.0 870.0,185.0 878.3,185.0 886.5,185.0 894.8,185.0 903.1,185.0 911.4,185.0 919.7,185.0 928.0,185.0" class="line" />
   <circle cx="74.0" cy="185.0" r="2.5" class="point">
       <title>2026-08-16 · 1 star</title>
     </circle>
-    <circle cx="82.4" cy="185.0" r="2.5" class="point">
+    <circle cx="82.3" cy="185.0" r="2.5" class="point">
       <title>2026-08-17 · 1 star</title>
     </circle>
-    <circle cx="90.7" cy="185.0" r="2.5" class="point">
+    <circle cx="90.6" cy="185.0" r="2.5" class="point">
       <title>2026-08-18 · 1 star</title>
     </circle>
-    <circle cx="99.1" cy="185.0" r="2.5" class="point">
+    <circle cx="98.9" cy="185.0" r="2.5" class="point">
       <title>2026-08-19 · 1 star</title>
     </circle>
-    <circle cx="107.5" cy="185.0" r="2.5" class="point">
+    <circle cx="107.2" cy="185.0" r="2.5" class="point">
       <title>2026-08-20 · 1 star</title>
     </circle>
-    <circle cx="115.9" cy="185.0" r="2.5" class="point">
+    <circle cx="115.5" cy="185.0" r="2.5" class="point">
       <title>2026-08-21 · 1 star</title>
     </circle>
-    <circle cx="124.2" cy="185.0" r="2.5" class="point">
+    <circle cx="123.7" cy="185.0" r="2.5" class="point">
       <title>2026-08-22 · 1 star</title>
     </circle>
-    <circle cx="132.6" cy="185.0" r="2.5" class="point">
+    <circle cx="132.0" cy="185.0" r="2.5" class="point">
       <title>2026-08-23 · 1 star</title>
     </circle>
-    <circle cx="141.0" cy="185.0" r="2.5" class="point">
+    <circle cx="140.3" cy="185.0" r="2.5" class="point">
       <title>2026-08-24 · 1 star</title>
     </circle>
-    <circle cx="149.4" cy="185.0" r="2.5" class="point">
+    <circle cx="148.6" cy="185.0" r="2.5" class="point">
       <title>2026-08-25 · 1 star</title>
     </circle>
-    <circle cx="157.7" cy="185.0" r="2.5" class="point">
+    <circle cx="156.9" cy="185.0" r="2.5" class="point">
       <title>2026-08-26 · 1 star</title>
     </circle>
-    <circle cx="166.1" cy="185.0" r="2.5" class="point">
+    <circle cx="165.2" cy="185.0" r="2.5" class="point">
       <title>2026-08-27 · 1 star</title>
     </circle>
-    <circle cx="174.5" cy="185.0" r="2.5" class="point">
+    <circle cx="173.5" cy="185.0" r="2.5" class="point">
       <title>2026-08-28 · 1 star</title>
     </circle>
-    <circle cx="182.8" cy="185.0" r="2.5" class="point">
+    <circle cx="181.8" cy="185.0" r="2.5" class="point">
       <title>2026-08-29 · 1 star</title>
     </circle>
-    <circle cx="191.2" cy="185.0" r="2.5" class="point">
+    <circle cx="190.1" cy="185.0" r="2.5" class="point">
       <title>2026-08-30 · 1 star</title>
     </circle>
-    <circle cx="199.6" cy="185.0" r="2.5" class="point">
+    <circle cx="198.4" cy="185.0" r="2.5" class="point">
       <title>2026-08-31 · 1 star</title>
     </circle>
-    <circle cx="208.0" cy="185.0" r="2.5" class="point">
+    <circle cx="206.7" cy="185.0" r="2.5" class="point">
       <title>2026-09-01 · 1 star</title>
     </circle>
-    <circle cx="216.3" cy="185.0" r="2.5" class="point">
+    <circle cx="215.0" cy="185.0" r="2.5" class="point">
       <title>2026-09-02 · 1 star</title>
     </circle>
-    <circle cx="224.7" cy="185.0" r="2.5" class="point">
+    <circle cx="223.2" cy="185.0" r="2.5" class="point">
       <title>2026-09-03 · 1 star</title>
     </circle>
-    <circle cx="233.1" cy="185.0" r="2.5" class="point">
+    <circle cx="231.5" cy="185.0" r="2.5" class="point">
       <title>2026-09-04 · 1 star</title>
     </circle>
-    <circle cx="241.5" cy="185.0" r="2.5" class="point">
+    <circle cx="239.8" cy="185.0" r="2.5" class="point">
       <title>2026-09-05 · 1 star</title>
     </circle>
-    <circle cx="249.8" cy="185.0" r="2.5" class="point">
+    <circle cx="248.1" cy="185.0" r="2.5" class="point">
       <title>2026-09-06 · 1 star</title>
     </circle>
-    <circle cx="258.2" cy="185.0" r="2.5" class="point">
+    <circle cx="256.4" cy="185.0" r="2.5" class="point">
       <title>2026-09-07 · 1 star</title>
     </circle>
-    <circle cx="266.6" cy="185.0" r="2.5" class="point">
+    <circle cx="264.7" cy="185.0" r="2.5" class="point">
       <title>2026-09-08 · 1 star</title>
     </circle>
-    <circle cx="274.9" cy="185.0" r="2.5" class="point">
+    <circle cx="273.0" cy="185.0" r="2.5" class="point">
       <title>2026-09-09 · 1 star</title>
     </circle>
-    <circle cx="283.3" cy="185.0" r="2.5" class="point">
+    <circle cx="281.3" cy="185.0" r="2.5" class="point">
       <title>2026-09-10 · 1 star</title>
     </circle>
-    <circle cx="291.7" cy="185.0" r="2.5" class="point">
+    <circle cx="289.6" cy="185.0" r="2.5" class="point">
       <title>2026-09-11 · 1 star</title>
     </circle>
-    <circle cx="300.1" cy="185.0" r="2.5" class="point">
+    <circle cx="297.9" cy="185.0" r="2.5" class="point">
       <title>2026-09-12 · 1 star</title>
     </circle>
-    <circle cx="308.4" cy="185.0" r="2.5" class="point">
+    <circle cx="306.2" cy="185.0" r="2.5" class="point">
       <title>2026-09-13 · 1 star</title>
     </circle>
-    <circle cx="316.8" cy="185.0" r="2.5" class="point">
+    <circle cx="314.4" cy="185.0" r="2.5" class="point">
       <title>2026-09-14 · 1 star</title>
     </circle>
-    <circle cx="325.2" cy="185.0" r="2.5" class="point">
+    <circle cx="322.7" cy="185.0" r="2.5" class="point">
       <title>2026-09-15 · 1 star</title>
     </circle>
-    <circle cx="333.5" cy="185.0" r="2.5" class="point">
+    <circle cx="331.0" cy="185.0" r="2.5" class="point">
       <title>2026-09-16 · 1 star</title>
     </circle>
-    <circle cx="341.9" cy="185.0" r="2.5" class="point">
+    <circle cx="339.3" cy="185.0" r="2.5" class="point">
       <title>2026-09-17 · 1 star</title>
     </circle>
-    <circle cx="350.3" cy="185.0" r="2.5" class="point">
+    <circle cx="347.6" cy="185.0" r="2.5" class="point">
       <title>2026-09-18 · 1 star</title>
     </circle>
-    <circle cx="358.7" cy="185.0" r="2.5" class="point">
+    <circle cx="355.9" cy="185.0" r="2.5" class="point">
       <title>2026-09-19 · 1 star</title>
     </circle>
-    <circle cx="367.0" cy="185.0" r="2.5" class="point">
+    <circle cx="364.2" cy="185.0" r="2.5" class="point">
       <title>2026-09-20 · 1 star</title>
     </circle>
-    <circle cx="375.4" cy="185.0" r="2.5" class="point">
+    <circle cx="372.5" cy="185.0" r="2.5" class="point">
       <title>2026-09-21 · 1 star</title>
     </circle>
-    <circle cx="383.8" cy="185.0" r="2.5" class="point">
+    <circle cx="380.8" cy="185.0" r="2.5" class="point">
       <title>2026-09-22 · 1 star</title>
     </circle>
-    <circle cx="392.2" cy="185.0" r="2.5" class="point">
+    <circle cx="389.1" cy="185.0" r="2.5" class="point">
       <title>2026-09-23 · 1 star</title>
     </circle>
-    <circle cx="400.5" cy="185.0" r="2.5" class="point">
+    <circle cx="397.4" cy="185.0" r="2.5" class="point">
       <title>2026-09-24 · 1 star</title>
     </circle>
-    <circle cx="408.9" cy="185.0" r="2.5" class="point">
+    <circle cx="405.7" cy="185.0" r="2.5" class="point">
       <title>2026-09-25 · 1 star</title>
     </circle>
-    <circle cx="417.3" cy="185.0" r="2.5" class="point">
+    <circle cx="413.9" cy="185.0" r="2.5" class="point">
       <title>2026-09-26 · 1 star</title>
     </circle>
-    <circle cx="425.6" cy="185.0" r="2.5" class="point">
+    <circle cx="422.2" cy="185.0" r="2.5" class="point">
       <title>2026-09-27 · 1 star</title>
     </circle>
-    <circle cx="434.0" cy="185.0" r="2.5" class="point">
+    <circle cx="430.5" cy="185.0" r="2.5" class="point">
       <title>2026-09-28 · 1 star</title>
     </circle>
-    <circle cx="442.4" cy="185.0" r="2.5" class="point">
+    <circle cx="438.8" cy="185.0" r="2.5" class="point">
       <title>2026-09-29 · 1 star</title>
     </circle>
-    <circle cx="450.8" cy="185.0" r="2.5" class="point">
+    <circle cx="447.1" cy="185.0" r="2.5" class="point">
       <title>2026-09-30 · 1 star</title>
     </circle>
-    <circle cx="459.1" cy="185.0" r="2.5" class="point">
+    <circle cx="455.4" cy="185.0" r="2.5" class="point">
       <title>2026-10-01 · 1 star</title>
     </circle>
-    <circle cx="467.5" cy="185.0" r="2.5" class="point">
+    <circle cx="463.7" cy="185.0" r="2.5" class="point">
       <title>2026-10-02 · 1 star</title>
     </circle>
-    <circle cx="475.9" cy="185.0" r="2.5" class="point">
+    <circle cx="472.0" cy="185.0" r="2.5" class="point">
       <title>2026-10-03 · 1 star</title>
     </circle>
-    <circle cx="484.3" cy="185.0" r="2.5" class="point">
+    <circle cx="480.3" cy="185.0" r="2.5" class="point">
       <title>2026-10-04 · 1 star</title>
     </circle>
-    <circle cx="492.6" cy="185.0" r="2.5" class="point">
+    <circle cx="488.6" cy="185.0" r="2.5" class="point">
       <title>2026-10-05 · 1 star</title>
     </circle>
-    <circle cx="501.0" cy="185.0" r="2.5" class="point">
+    <circle cx="496.9" cy="185.0" r="2.5" class="point">
       <title>2026-10-06 · 1 star</title>
     </circle>
-    <circle cx="509.4" cy="185.0" r="2.5" class="point">
+    <circle cx="505.1" cy="185.0" r="2.5" class="point">
       <title>2026-10-07 · 1 star</title>
     </circle>
-    <circle cx="517.7" cy="185.0" r="2.5" class="point">
+    <circle cx="513.4" cy="185.0" r="2.5" class="point">
       <title>2026-10-08 · 1 star</title>
     </circle>
-    <circle cx="526.1" cy="185.0" r="2.5" class="point">
+    <circle cx="521.7" cy="185.0" r="2.5" class="point">
       <title>2026-10-09 · 1 star</title>
     </circle>
-    <circle cx="534.5" cy="185.0" r="2.5" class="point">
+    <circle cx="530.0" cy="185.0" r="2.5" class="point">
       <title>2026-10-10 · 1 star</title>
     </circle>
-    <circle cx="542.9" cy="185.0" r="2.5" class="point">
+    <circle cx="538.3" cy="185.0" r="2.5" class="point">
       <title>2026-10-11 · 1 star</title>
     </circle>
-    <circle cx="551.2" cy="185.0" r="2.5" class="point">
+    <circle cx="546.6" cy="185.0" r="2.5" class="point">
       <title>2026-10-12 · 1 star</title>
     </circle>
-    <circle cx="559.6" cy="185.0" r="2.5" class="point">
+    <circle cx="554.9" cy="185.0" r="2.5" class="point">
       <title>2026-10-13 · 1 star</title>
     </circle>
-    <circle cx="568.0" cy="185.0" r="2.5" class="point">
+    <circle cx="563.2" cy="185.0" r="2.5" class="point">
       <title>2026-10-14 · 1 star</title>
     </circle>
-    <circle cx="576.4" cy="185.0" r="2.5" class="point">
+    <circle cx="571.5" cy="185.0" r="2.5" class="point">
       <title>2026-10-15 · 1 star</title>
     </circle>
-    <circle cx="584.7" cy="185.0" r="2.5" class="point">
+    <circle cx="579.8" cy="185.0" r="2.5" class="point">
       <title>2026-10-16 · 1 star</title>
     </circle>
-    <circle cx="593.1" cy="185.0" r="2.5" class="point">
+    <circle cx="588.1" cy="185.0" r="2.5" class="point">
       <title>2026-10-17 · 1 star</title>
     </circle>
-    <circle cx="601.5" cy="185.0" r="2.5" class="point">
+    <circle cx="596.3" cy="185.0" r="2.5" class="point">
       <title>2026-10-18 · 1 star</title>
     </circle>
-    <circle cx="609.8" cy="185.0" r="2.5" class="point">
+    <circle cx="604.6" cy="185.0" r="2.5" class="point">
       <title>2026-10-19 · 1 star</title>
     </circle>
-    <circle cx="618.2" cy="185.0" r="2.5" class="point">
+    <circle cx="612.9" cy="185.0" r="2.5" class="point">
       <title>2026-10-20 · 1 star</title>
     </circle>
-    <circle cx="626.6" cy="185.0" r="2.5" class="point">
+    <circle cx="621.2" cy="185.0" r="2.5" class="point">
       <title>2026-10-21 · 1 star</title>
     </circle>
-    <circle cx="635.0" cy="185.0" r="2.5" class="point">
+    <circle cx="629.5" cy="185.0" r="2.5" class="point">
       <title>2026-10-22 · 1 star</title>
     </circle>
-    <circle cx="643.3" cy="185.0" r="2.5" class="point">
+    <circle cx="637.8" cy="185.0" r="2.5" class="point">
       <title>2026-10-23 · 1 star</title>
     </circle>
-    <circle cx="651.7" cy="185.0" r="2.5" class="point">
+    <circle cx="646.1" cy="185.0" r="2.5" class="point">
       <title>2026-10-24 · 1 star</title>
     </circle>
-    <circle cx="660.1" cy="185.0" r="2.5" class="point">
+    <circle cx="654.4" cy="185.0" r="2.5" class="point">
       <title>2026-10-25 · 1 star</title>
     </circle>
-    <circle cx="668.5" cy="185.0" r="2.5" class="point">
+    <circle cx="662.7" cy="185.0" r="2.5" class="point">
       <title>2026-10-26 · 1 star</title>
     </circle>
-    <circle cx="676.8" cy="185.0" r="2.5" class="point">
+    <circle cx="671.0" cy="185.0" r="2.5" class="point">
       <title>2026-10-27 · 1 star</title>
     </circle>
-    <circle cx="685.2" cy="185.0" r="2.5" class="point">
+    <circle cx="679.3" cy="185.0" r="2.5" class="point">
       <title>2026-10-28 · 1 star</title>
     </circle>
-    <circle cx="693.6" cy="185.0" r="2.5" class="point">
+    <circle cx="687.6" cy="185.0" r="2.5" class="point">
       <title>2026-10-29 · 1 star</title>
     </circle>
-    <circle cx="701.9" cy="185.0" r="2.5" class="point">
+    <circle cx="695.8" cy="185.0" r="2.5" class="point">
       <title>2026-10-30 · 1 star</title>
     </circle>
-    <circle cx="710.3" cy="185.0" r="2.5" class="point">
+    <circle cx="704.1" cy="185.0" r="2.5" class="point">
       <title>2026-10-31 · 1 star</title>
     </circle>
-    <circle cx="718.7" cy="185.0" r="2.5" class="point">
+    <circle cx="712.4" cy="185.0" r="2.5" class="point">
       <title>2026-11-01 · 1 star</title>
     </circle>
-    <circle cx="727.1" cy="185.0" r="2.5" class="point">
+    <circle cx="720.7" cy="185.0" r="2.5" class="point">
       <title>2026-11-02 · 1 star</title>
     </circle>
-    <circle cx="735.4" cy="185.0" r="2.5" class="point">
+    <circle cx="729.0" cy="185.0" r="2.5" class="point">
       <title>2026-11-03 · 1 star</title>
     </circle>
-    <circle cx="743.8" cy="185.0" r="2.5" class="point">
+    <circle cx="737.3" cy="185.0" r="2.5" class="point">
       <title>2026-11-04 · 1 star</title>
     </circle>
-    <circle cx="752.2" cy="185.0" r="2.5" class="point">
+    <circle cx="745.6" cy="185.0" r="2.5" class="point">
       <title>2026-11-05 · 1 star</title>
     </circle>
-    <circle cx="760.5" cy="185.0" r="2.5" class="point">
+    <circle cx="753.9" cy="185.0" r="2.5" class="point">
       <title>2026-11-06 · 1 star</title>
     </circle>
-    <circle cx="768.9" cy="185.0" r="2.5" class="point">
+    <circle cx="762.2" cy="185.0" r="2.5" class="point">
       <title>2026-11-07 · 1 star</title>
     </circle>
-    <circle cx="777.3" cy="185.0" r="2.5" class="point">
+    <circle cx="770.5" cy="185.0" r="2.5" class="point">
       <title>2026-11-08 · 1 star</title>
     </circle>
-    <circle cx="785.7" cy="185.0" r="2.5" class="point">
+    <circle cx="778.8" cy="185.0" r="2.5" class="point">
       <title>2026-11-09 · 1 star</title>
     </circle>
-    <circle cx="794.0" cy="185.0" r="2.5" class="point">
+    <circle cx="787.0" cy="185.0" r="2.5" class="point">
       <title>2026-11-10 · 1 star</title>
     </circle>
-    <circle cx="802.4" cy="185.0" r="2.5" class="point">
+    <circle cx="795.3" cy="185.0" r="2.5" class="point">
       <title>2026-11-11 · 1 star</title>
     </circle>
-    <circle cx="810.8" cy="185.0" r="2.5" class="point">
+    <circle cx="803.6" cy="185.0" r="2.5" class="point">
       <title>2026-11-12 · 1 star</title>
     </circle>
-    <circle cx="819.2" cy="185.0" r="2.5" class="point">
+    <circle cx="811.9" cy="185.0" r="2.5" class="point">
       <title>2026-11-13 · 1 star</title>
     </circle>
-    <circle cx="827.5" cy="185.0" r="2.5" class="point">
+    <circle cx="820.2" cy="185.0" r="2.5" class="point">
       <title>2026-11-14 · 1 star</title>
     </circle>
-    <circle cx="835.9" cy="185.0" r="2.5" class="point">
+    <circle cx="828.5" cy="185.0" r="2.5" class="point">
       <title>2026-11-15 · 1 star</title>
     </circle>
-    <circle cx="844.3" cy="185.0" r="2.5" class="point">
+    <circle cx="836.8" cy="185.0" r="2.5" class="point">
       <title>2026-11-16 · 1 star</title>
     </circle>
-    <circle cx="852.6" cy="185.0" r="2.5" class="point">
+    <circle cx="845.1" cy="185.0" r="2.5" class="point">
       <title>2026-11-17 · 1 star</title>
     </circle>
-    <circle cx="861.0" cy="185.0" r="2.5" class="point">
+    <circle cx="853.4" cy="185.0" r="2.5" class="point">
       <title>2026-11-18 · 1 star</title>
     </circle>
-    <circle cx="869.4" cy="185.0" r="2.5" class="point">
+    <circle cx="861.7" cy="185.0" r="2.5" class="point">
       <title>2026-11-19 · 1 star</title>
     </circle>
-    <circle cx="877.8" cy="185.0" r="2.5" class="point">
+    <circle cx="870.0" cy="185.0" r="2.5" class="point">
       <title>2026-11-20 · 1 star</title>
     </circle>
-    <circle cx="886.1" cy="185.0" r="2.5" class="point">
+    <circle cx="878.3" cy="185.0" r="2.5" class="point">
       <title>2026-11-21 · 1 star</title>
     </circle>
-    <circle cx="894.5" cy="185.0" r="2.5" class="point">
+    <circle cx="886.5" cy="185.0" r="2.5" class="point">
       <title>2026-11-22 · 1 star</title>
     </circle>
-    <circle cx="902.9" cy="185.0" r="2.5" class="point">
+    <circle cx="894.8" cy="185.0" r="2.5" class="point">
       <title>2026-11-23 · 1 star</title>
     </circle>
-    <circle cx="911.3" cy="185.0" r="2.5" class="point">
+    <circle cx="903.1" cy="185.0" r="2.5" class="point">
       <title>2026-11-24 · 1 star</title>
     </circle>
-    <circle cx="919.6" cy="185.0" r="2.5" class="point">
+    <circle cx="911.4" cy="185.0" r="2.5" class="point">
       <title>2026-11-25 · 1 star</title>
     </circle>
-    <circle cx="928.0" cy="185.0" r="2.5" class="point">
+    <circle cx="919.7" cy="185.0" r="2.5" class="point">
       <title>2026-11-26 · 1 star</title>
     </circle>
+    <circle cx="928.0" cy="185.0" r="2.5" class="point">
+      <title>2026-11-27 · 1 star</title>
+    </circle>
   <text x="74" y="338" class="date">2026-08-16</text>
-  <text x="928" y="338" text-anchor="end" class="date">2026-11-26</text>
+  <text x="928" y="338" text-anchor="end" class="date">2026-11-27</text>
 </svg>
